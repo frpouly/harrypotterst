@@ -1,0 +1,313 @@
+/* DashboardComponent's private CSS styles */
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+a {
+  text-decoration: none;
+}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+h4 {
+  position: relative;
+}
+.grid {
+  margin: 0;
+}
+.col-1-4 {
+  width: 25%;
+}
+.module {
+  padding: 20px;
+  text-align: center;
+  color: #eee;
+  max-height: 120px;
+  min-width: 120px;
+  background-color: #3f525c;
+  border-radius: 2px;
+}
+.module:hover {
+  background-color: #EEE;
+  cursor: pointer;
+  color: #607d8b;
+}
+.grid-pad {
+  padding: 10px 0;
+}
+.grid-pad > [class*='col-']:last-of-type {
+  padding-right: 20px;
+}
+@media (max-width: 600px) {
+  .module {
+    font-size: 10px;
+    max-height: 75px; }
+}
+@media (max-width: 1024px) {
+  .grid {
+    margin: 0;
+  }
+  .module {
+    min-width: 60px;
+  }
+}
+
+.buttons-row
+{
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons-row button
+{
+  font-size: xx-large;
+  width : 25%;
+  height: 300px;
+}
+
+h3
+{
+  font-size: xx-large;
+}
+
+.game-content
+{
+  padding: 2%;
+}
+
+.container
+{
+  height: auto;
+  margin-top : 1%;
+  display :flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container mat-chip-list
+{
+  width : 20%;
+}
+
+.container mat-chip-list mat-chip
+{
+  font-size: x-large;
+  height: 5%;
+}
+
+.level-container, .monster-container, .spell-container
+{
+  background-color: rgb(51, 58, 69);
+  padding: 2%;
+  border-radius: 7px;
+}
+
+.level-container
+{
+  width: 45%;
+  height: auto;
+}
+.level-container img
+{
+  border-radius: 20px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.monster-container
+{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.monster-container mat-card
+{
+  height: 30vh;
+  width: 100%;
+  background-color: transparent;
+  border: 0px;
+}
+
+.monster-container h3
+{
+  color : #3f525c;
+  margin: 0%;
+  font-size: 2vw;
+}
+
+.monster-container 
+{
+  font-size: 1vw;
+}
+
+.monsters-cards
+{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.descriptif
+{
+  height: 100%;
+}
+
+.flip-card 
+{
+  margin-bottom: 3%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  height: 100%;
+  background-color: rgb(243, 240, 240);
+  color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(243, 240, 240);
+  color: black;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card-front img
+{
+  height: auto;
+  width: auto;
+  max-height: 80%;
+  max-width: 80%;
+  margin-top: 3%;
+}
+
+.spell-container
+{
+  width: 30%;
+}
+
+.spells
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.spell-container button
+{
+  height: 10%;
+  background-color: rgb(223, 90, 92);
+}
+
+.spell-name
+{
+  line-height: initial;
+}
+
+
+.spell-name p
+{
+  margin: 0%;
+  font-size: 1vw;
+}
+mat-button-toggle
+{
+  color : white;
+  background-color:  rgb(89, 108, 189);
+  width: 32%;
+  height: 8vh;
+  margin-bottom: 2%;
+  white-space: pre-wrap !important;
+}
+
+.mat-button-toggle-checked 
+{
+  color :white;
+  background-color: rgb(110, 43, 177) !important;
+}
+
+button
+{
+  margin-top: 3%;
+  width: 100%;
+  height: 15%;
+}
+
+.game-content
+{
+  height: 100%;
+  background-color: rgb(42, 47, 57);
+  color : white;
+  padding-top: 2%;
+}
+
+.game-content h4
+{
+  margin: 0;
+}
+
+.victoire-content
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mat-dialog-content
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mat-dialog-actions
+{
+  width : 100%;
+}

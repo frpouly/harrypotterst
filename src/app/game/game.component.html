@@ -1,0 +1,48 @@
+<div class="game-content">
+
+
+     <h4>Bonjour {{playerName}} !! Bienvenue à Poudlard !!!</h4>
+
+     <div class="container">
+          <div class="level-container">
+               <h2>Lieu</h2>
+               <img id="level-image" src="" alt="Image to illustrate the Level">
+               <p id="level-text"></p>
+          </div>
+
+          <div class="monster-container">
+               <h2>Monstres</h2>
+               <div class="monsters-cards">
+                    <mat-card *ngFor="let monster of levelMonsters" class="flip-card">
+                         <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                   <div class="descriptif">
+                                        <div class="monster-name"><h3>{{monster.Name}}</h3></div>
+                                        <img class="monster-image" src={{monster.Image}}
+                                             alt="Image to illustrate the Monster">
+                                   </div>
+                              </div>
+                              <div class="flip-card-back">
+                                   <h3>{{monster.Name}}</h3>
+                                   <p>{{monster.Text}}</p>
+                              </div>
+                         </div>
+                    </mat-card>
+               </div>
+          </div>
+
+
+
+          <div class="spell-container">
+               <h2>Grimmoire de sortillèges</h2>
+               <div class="spells">
+                    <mat-button-toggle *ngFor="let spell of availableSpells" value=spell matTooltip={{spell.Description}} (change)="onValChange(spell)">
+                         <div class="spell-name">
+                              <p>{{spell.Name}}</p>
+                         </div>
+                    </mat-button-toggle>
+               </div>
+               <button mat-raised-button (click)="abracadabra()" color="primary">Abracadabra</button>
+          </div>
+     </div>
+</div>

@@ -1,0 +1,39 @@
+.aide-content
+{
+    height: 84%;
+    width: 100%;
+    background-color: rgb(42, 47, 57);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.aide
+{
+    color: white;
+    background-color: rgb(51, 58, 69);
+    width: 50%;
+    padding: 3%;
+    height: fit-content; 
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+image: node:12.15.0
+
+pages:
+  cache:
+    paths:
+    - node_modules/
+
+  stage: deploy
+  script:
+  - npm install -g @angular/cli@9.1.0
+  - npm install
+  - ng build
+  - mv dist/fossilizer/* public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+  - pages

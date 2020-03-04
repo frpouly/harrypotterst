@@ -1,0 +1,18 @@
+h1
+{
+  text-align: center;
+}
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10%;
+  align-items: center;
+}
+.container *:not(input)
+{
+  width: 20%;
+}
